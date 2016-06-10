@@ -11,13 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('aboutus', function() {
+// Route::get('aboutus', function() {
 
-	$people = ["Sam", "Joe", "Kelly"];
+// 	$people = ["Sam", "Joe", "Kelly"];
 
-	return view('pages.aboutus', compact('people'));
-});
+// 	return view('aboutus', compact('people'));
+// });
+
+
+Route::get('/', 'PagesController@home');
+
+Route::get('about', 'PagesController@about');
