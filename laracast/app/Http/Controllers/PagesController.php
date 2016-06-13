@@ -15,12 +15,23 @@ class PagesController extends Controller
 	return view('welcome', compact('people'));
     }
 
-    public function about()
+    public function contact()
     {
 
-    	return view('about');
+    	return view('contact');
 
     }
+
+    // This function will show the view
+ public function showForm()
+ {
+  return View::make('contactform');
+ }
+
+ public function handleFormPost()
+ {
+  // All code for handling the input comes here later on
+ }
 
 
 
