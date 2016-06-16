@@ -8,6 +8,15 @@
 <div class="container">
  <h1>A basic contact form</h1>
  <form id="contact" method="post" class="form" role="form">
+
+  @if(Session::has('errors'))
+   <div class="alert alert-warning">
+    @foreach(Session::get('errors')->all() as $error_message)
+     <p>{{ $error_message }}</p>
+    @endforeach
+   </div>
+  @endif
+
   <div class="row">
    <div class="col-xs-6 col-md-6 form-group">
     <input class="form-control" id="name" name="name" placeholder="Name" type="text"autofocus="">

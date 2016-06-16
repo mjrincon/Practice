@@ -25,4 +25,6 @@
 
 Route::get('/', 'PagesController@home');
 
-Route::get('contact', 'PagesController@contact');
+$router->get('contact', 'PagesController@showform');
+
+Route::post('contact', 'PagesController@sendContactInfo');
